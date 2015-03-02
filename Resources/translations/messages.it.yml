@@ -1,0 +1,135 @@
+actions:
+    add_company: Aggiungi una società
+    add_user: Aggiungi un utente
+    add: Aggiungi
+    close: Chiudi
+    delete: Elimina
+    edit: Modifica
+    edit_company: Modifica società
+    edit_user: Modifica utente
+    exit_impersonate: Esci
+    filter: Filtra
+    impersonate: Impersona
+    login: Accedi
+    register: Registrati
+    register_user: Registra utente
+    request_reset_password: Richiedi
+    reset_password: Ripristina
+    reset: Reimposta
+
+alert:
+    warning: Attenzione
+
+change_password:
+    title: Modifica la password
+
+companies:
+    delete_confirmation: Sei sicuro di voler cancellare la società?
+    empty_list: Nessuna società definita.
+    title: Società
+
+company:
+    delete: Elimina "%company%"
+    edit: Modifica "%company%"
+
+error:
+    bad_credentials: Credenziali errate
+    empty_task_template_title: Inserisci il titolo del task
+    unauthorized: Credenziali errate
+    wrong_password: Credenziali errate
+    email_already_defined: Email già registrata
+
+flash:
+  company:
+    created: Società "%company%" creata con successo.
+    deleted: Società "%company%" eliminata con successo.
+    updated: Società "%company%" modificata con successo.
+  password:
+    updated: Password modificata con successo.
+  user:
+    created: Utente "%user%" creato con successo.
+    deleted: Utente "%user%" eliminato con successo.
+    updated: Utente "%user%" modificato con successo.
+
+form:
+    action: Azione
+    change: Modifica
+    company: Società
+    current_password: Password attuale
+    email: Email
+    emails: Email
+    empty_value:
+    is_active: Attivo
+    name: Nome
+    new_password: Nuova password
+    no_category: Nessuna
+    password: Password
+    remember_me: 'Ricordami'
+    remove: Rimuovi
+    save: Salva
+    save_and_close: Salva e chiudi
+    status: Stato
+    title: Titolo
+    username: Email
+
+login:
+    already_registered: Vuoi accedere?
+    title: Accedi
+
+menu:
+    companies: Società
+    homepage: Home
+    login: Accedi
+    logout: Esci
+    logs: Log
+    register: Registrati
+    users: Utenti
+    welcome: Benvenuto, <a class="navbar-link" href="%url%" title="%username%">%username%</a> %exit_impersonate%
+
+registration:
+    check_email: Ti sei registrato con successo. Controlla la tua email, e attiva il tuo account.
+    completed: Registrazione completata.
+    login: accedi
+    message: Ora puoi cliccare su %url%.
+    not_yet_registered: Vuoi registrarti?
+    success: Registrazione avvenuta con successo
+    thank_you: Grazie!
+
+reset_password:
+    check_email: Hai richiesto il ripristino della password. Controlla la tua mail, e reimposta la password.
+    completed: Hai ripristinato la tua password
+    login: accedi
+    message: Ora puoi cliccare su %url%.
+    request: Hai dimenticato la password?
+    request_sent: La richiesta di ripristino password è stata inviata.
+    reset: Ripristina la password
+    thank_you: Grazie!
+
+role:
+    admin: Admin
+    manager: Manager
+    user: Utente
+    superadmin: Superadmin
+
+sort:
+    action: Azione
+    company: Società
+    date: Data
+    email: Email
+    is_active: Attivo?
+    name: Nome
+    role: Ruolo
+    type: Tipo
+    user: Utente
+
+tasks: Task
+
+user:
+    change_password: Modifica la password
+    delete: Elimina "%user%"
+    edit: Modifica "%user%"
+
+users:
+    delete_confirmation: Sei sicuro di voler cancellare l'utente?
+    empty_list: Non sono registrati utenti per questa società.
+    title: Utenti

@@ -1,0 +1,44 @@
+{% extends '::one-column.html.twig' %}
+
+{% block main_content %}
+
+    <div class="row">
+
+        <div class="col-md-12 col-lg-push-3 col-lg-6">
+            <h1>{{ 'login.title'|trans }}</h1>
+
+            <form action="{{ path('login_check') }}" method="post" {{ form_enctype(form) }}>
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        {{ form_errors(form) }}
+
+                        {{ form_row(form._username) }}
+                        {{ form_row(form._password) }}
+
+                        {#<div class="form-group">#}
+                        {#<label for="username">{{ 'form.username'|trans }}</label>#}
+                        {#<input class="form-control" type="text" id="username" name="_username"#}
+                        {#value="{{ last_username }}" required="required"/>#}
+                        {#</div>#}
+
+                        <a class="btn btn-link pull-right"
+                           href="{{ path('reset_password_request') }}">{{ 'reset_password.request'|trans }}</a>
+
+                        {{ form_row(form._remember_me) }}
+
+                        <hr />
+
+                        {{ form_row(form.login) }}
+
+                        <a class="btn btn-link pull-right"
+                           href="{{ path('register') }}">{{ 'registration.not_yet_registered'|trans }}</a>
+
+                        {{ form_rest(form) }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+{% endblock main_content %}

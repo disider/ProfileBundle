@@ -1,0 +1,11 @@
+error:
+    bad_credentials: Bad credentials
+    empty_email: Empty email
+    empty_name: Empty name
+    empty_new_password: Empty new password
+    empty_password: Empty password
+    inactive_user: Inactive user
+    not_found: Not found
+    unauthorized: Unauthorized
+    wrong_email: Wrong email
+    wrong_password: Wrong password

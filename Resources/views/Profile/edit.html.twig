@@ -1,0 +1,7 @@
+{% extends '::two-columns.html.twig' %}
+
+{% block main_content %}
+    <h1>{{ 'actions.edit_profile'|trans }}</h1>
+
+    {% include 'DisideProfileBundle:Profile:_form.html.twig' %}
+{% endblock main_content %}

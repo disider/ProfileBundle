@@ -1,0 +1,29 @@
+<form class="profile" method="POST" action="{{ path('profile_edit') }}">
+    <div class="panel panel-default">
+        <div class="panel-body ">
+            {{ form_errors(form) }}
+
+            <div class="form-group">
+                <label class="form-label">{{ 'form.company'|trans }}</label>
+                <div>
+                    {{ form.vars.data.company }}
+                </div>
+            </div>
+
+            {{ form_row(form.email) }}
+
+            <p class="form-control-static">
+                <a id="change_password"
+                   href="{{ path('profile_change_password') }}">{{ 'user.change_password'|trans }}</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="form-actions">
+        {{ form_widget(form.save) }}
+        {{ form_widget(form.save_and_close) }}
+
+        {{ form_rest(form) }}
+    </div>
+
+</form>

@@ -1,0 +1,5 @@
+{% extends '::email.html.twig' %}
+
+{% block main_content %}
+    {{ 'registration.completed.body_html'|trans({'%user%' : user, '%url%' : url}, 'emails')|raw }}
+{% endblock main_content %}

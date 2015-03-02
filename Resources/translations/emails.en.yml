@@ -1,0 +1,66 @@
+registration:
+  completed:
+    subject: "Please activate your account"
+    body_html: |
+      Welcome %user%, <br>
+      your registration is almost complete!<br>
+      <br>
+      Click <a href="%url%">here</a> to activate your account!<br>
+      <br>
+      Best regards,<br>
+      The Team
+    body: |
+      Welcome %user%,
+      your registration is almost complete!
+
+      Click on the following link:
+
+      %url%
+
+      in order to activate your account!
+
+      Best regards,
+      The Team
+
+  confirmed:
+    subject: "Welcome"
+    body_html: |
+      Welcome %user%, <br>
+      your registration is now complete!<br>
+      <br>
+      Your account is active!<br>
+      <br>
+      Best regards,<br>
+      The Team
+
+    body: |
+      Welcome %user%,
+      your registration is now complete!
+
+      Your account is active!
+
+      Best regards,
+      The Team
+
+reset_password:
+  email:
+    subject: "Reset your password"
+    body_html: |
+      Dear %user%,<br>
+      you requested a password reset!<br>
+      <br>
+      Please click <a href="%url%">here</a> to create a new password.<br>
+      <br>
+      Best regards,<br>
+      The Team
+
+    body: |
+      Dear %user%,
+      you requested a password reset!
+
+      Please click on the following link to create a new password:
+
+      %url%
+
+      Best regards,
+      The Team

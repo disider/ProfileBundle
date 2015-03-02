@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="profile.mailer.default_mailer.class">Diside\ProfileBundle\Mailer\DefaultMailer</parameter>
+
+        <parameter key="profile.mailer.emails" type="collection">
+            <parameter key="no-reply">%noreply_email%</parameter>
+        </parameter>
+
+        <parameter key="profile.mailer.display_names" type="collection">
+            <parameter key="no-reply">%noreply_display_name%</parameter>
+        </parameter>
+
+    </parameters>
+
+    <services>
+
+        <service id="profile.user_manager" class="Diside\ProfileBundle\Model\UserManager">
+            <argument type="service" id="security.encoder_factory" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%diside_profile.user_class%</argument>
+        </service>
+
+        <service id="profile.mailer" class="%profile.mailer.default_mailer.class%">
+            <argument type="service" id="templating" />
+            <argument type="service" id="router" />
+            <argument type="service" id="swiftmailer.mailer" />
+            <argument>%profile.mailer.display_names%</argument>
+            <argument>%profile.mailer.emails%</argument>
+        </service>
+
+    </services>
+
+</container>

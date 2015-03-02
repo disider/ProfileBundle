@@ -1,0 +1,11 @@
+error:
+    bad_credentials: Credenziali errate
+    empty_email: Inserisci un indirizzo email
+    empty_name: Inserisci il nome
+    empty_new_password: Inserisci la nuova password
+    empty_password: Inserisci la password
+    inactive_user: Utente non attivo
+    not_found: Non trovato
+    unauthorized: Non autorizzato
+    wrong_email: Indirizzo email non corretto
+    wrong_password: Password errata

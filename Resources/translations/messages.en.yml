@@ -1,0 +1,100 @@
+actions:
+    login: Login
+    register: Register
+    register_user: Register user
+    request_reset_password: Request
+    reset_password: Reset
+    reset: Reset
+
+alert:
+    warning: Warning
+
+change_password:
+    title: Change password
+
+error:
+    bad_credentials: Bad credentials
+    unauthorized: Bad credentials
+    wrong_password: Bad credentials
+    email_already_defined: Email already defined
+
+form:
+    action: Action
+    content: Content
+    current_password: Current password
+    email: Email
+    emails: Emails
+    empty_value:
+    enabled: enabled
+    login: Login
+    name: Name
+    new_password: New password
+    password: Password
+    remember_me: 'Remember me'
+    remove: Remove
+    save: Save
+    save_and_close: Save and close
+    status: Status
+    url: URL
+    username_or_email: Email
+
+locale:
+    en: English
+    fr: French
+    it: Italian
+
+login:
+    already_registered: Are you already registered?
+    title: Login
+
+pages:
+    title: Pages
+
+page:
+    delete: Delete "%page%"
+    edit: Edit "%page%"
+    show: Show "%page%"
+
+registration:
+    check_email: Your registration has been successful. Please, check your email and activate your account.
+    completed: Registration completed
+    login: login
+    message: You can now %url%.
+    not_yet_registered: Are you not yet registered?
+    success: Registration successful
+    thank_you: Thank you!
+
+reset_password:
+    check_email: You requested a password reset. Please, check your email and reset your password.
+    completed: You changed your password
+    login: login
+    message: You can now %url%.
+    request: Did you forget your password?
+    request_sent: Your password rest request has been sent
+    reset: Reset your password
+    thank_you: Thank you!
+
+role:
+    admin: Admin
+    manager: Manager
+    user: User
+    superadmin: Superadmin
+
+sort:
+    action: Action
+    company: Company
+    date: Date
+    email: Email
+    is_active: Active?
+    name: Name
+    role: Role
+    title: Title
+    type: Type
+    url: URL
+    user: User
+
+status:
+    all: All
+    completed: Completed
+    started: Started
+    idle: Idle

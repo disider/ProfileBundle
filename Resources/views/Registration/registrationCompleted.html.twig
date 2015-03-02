@@ -1,0 +1,11 @@
+{% extends '::one-column.html.twig' %}
+
+{% block main_content %}
+    <h1>{{ 'registration.completed'|trans }}</h1>
+
+    <p>{{ 'registration.thank_you'|trans }}</p>
+    {% set url %}
+    <a href="{{ path('login') }}">{{ 'registration.login'|trans }}</a>
+    {% endset %}
+    <p>{{ 'registration.message'|trans({'%url%': url})|raw }}</p>
+{% endblock main_content %}
