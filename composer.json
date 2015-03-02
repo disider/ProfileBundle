@@ -16,7 +16,7 @@
         "doctrine/doctrine-bundle": "~1.2"
     },
     "autoload": {
-        "psr-0": { "Diside\\Diside\ProfileBundle": "" }
+        "psr-0": { "Diside\\Diside\\ProfileBundle": "" }
     },
-    "target-dir": "Diside/Diside\ProfileBundle"
+    "target-dir": "Diside/Diside/ProfileBundle"
 }
