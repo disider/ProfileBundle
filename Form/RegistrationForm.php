@@ -28,7 +28,7 @@ class RegistrationForm extends BaseForm
 
     public function getName()
     {
-        return 'user_registration';
+        return 'registration';
     }
 
 }

@@ -171,6 +171,11 @@ class User implements UserInterface
         return $this->salt;
     }
 
+    public function setSalt($salt)
+    {
+        $this->salt = $salt;
+    }
+
     public function getEmail()
     {
         return $this->email;

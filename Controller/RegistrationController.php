@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * @Route("/register")
@@ -78,8 +79,11 @@ class RegistrationController extends BaseController
             return $this->redirect($this->generateUrl('homepage'));
         }
 
-        /** @var User $user */
+        /** @var UserInterface $user */
         $user = $this->getUserRepository()->findOneByConfirmationToken($token);
+        if(!$user)
+            throw new NotFoundHttpException(sprintf('User for token: %s not found', $token));
+
         $user->setEnabled(true);
 
         $this->saveUser($user);

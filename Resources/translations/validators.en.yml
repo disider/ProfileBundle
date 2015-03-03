@@ -9,3 +9,6 @@ error:
     unauthorized: Unauthorized
     wrong_email: Wrong email
     wrong_password: Wrong password
+    wrong_current_password: Please enter your current password
+
+"Username could not be found.": Bad credentials
