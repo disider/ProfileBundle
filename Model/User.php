@@ -4,12 +4,17 @@ namespace Diside\ProfileBundle\Model;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Validator\Constraints as Assert;
+use JMS\Serializer\Annotation as Serializer;
 
+/**
+ * @Serializer\ExclusionPolicy("all")
+ */
 class User implements UserInterface
 {
     protected $id;
 
     /**
+     * @Serializer\Expose()
      * @var string
      */
     protected $username;
@@ -17,6 +22,7 @@ class User implements UserInterface
     /**
      * @Assert\NotBlank(message="error.empty_email", groups={"default", "update", "registration"})
      * @Assert\Email(message="error.wrong_email", groups={"default", "update", "registration"})
+     * @Serializer\Expose()
      * @var string
      */
     protected $email;
@@ -50,6 +56,7 @@ class User implements UserInterface
     protected $plainPassword;
 
     /**
+     * @Serializer\Expose()
      * @var \DateTime
      */
     protected $lastLogin;
@@ -74,6 +81,7 @@ class User implements UserInterface
     protected $passwordRequestedAt;
 
     /**
+     * @Serializer\Expose()
      * @var array
      */
     protected $roles;

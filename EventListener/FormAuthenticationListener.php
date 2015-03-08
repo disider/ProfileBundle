@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Security\Core\Exception\AccountStatusException;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 
-class AuthenticationListener implements EventSubscriberInterface
+class FormAuthenticationListener implements EventSubscriberInterface
 {
     /**
      * @var SessionInterface

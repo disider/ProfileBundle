@@ -11,12 +11,6 @@
 
     <services>
 
-        <service id="profile.listener.authentication" class="Diside\ProfileBundle\EventListener\AuthenticationListener">
-            <tag name="kernel.event_subscriber" />
-            <argument type="service" id="profile.security.login_manager" />
-            <argument>main</argument>
-        </service>
-
         <service id="profile.security.interactive_login_listener" class="%profile.security.interactive_login_listener.class%">
             <tag name="kernel.event_subscriber" />
             <argument type="service" id="profile.user_manager" />

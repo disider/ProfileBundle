@@ -20,18 +20,9 @@ class LoginListener implements EventSubscriberInterface
     public static function getSubscribedEvents()
     {
         return array(
-//            FOSUserEvents::SECURITY_IMPLICIT_LOGIN => 'onImplicitLogin',
             SecurityEvents::INTERACTIVE_LOGIN => 'onSecurityInteractiveLogin',
         );
     }
-
-//    public function onImplicitLogin(UserEvent $event)
-//    {
-//        $user = $event->getUser();
-//
-//        $user->setLastLogin(new \DateTime());
-//        $this->userManager->updateUser($user);
-//    }
 
     public function onSecurityInteractiveLogin(InteractiveLoginEvent $event)
     {

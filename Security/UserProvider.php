@@ -5,11 +5,10 @@ namespace Diside\ProfileBundle\Security;
 use Diside\ProfileBundle\Model\User;
 use Diside\ProfileBundle\Model\UserInterface;
 use Diside\ProfileBundle\Model\UserManager;
-use Symfony\Component\Security\Core\Exception\DisabledException;
-use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
 use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface as SecurityUserInterface;
+use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 class UserProvider implements UserProviderInterface
 {
@@ -35,6 +34,20 @@ class UserProvider implements UserProviderInterface
         }
 
         return $user;
+    }
+
+    /**
+     * Finds a user by username.
+     *
+     * This method is meant to be an extension point for child classes.
+     *
+     * @param string $username
+     *
+     * @return UserInterface|null
+     */
+    protected function findUser($username)
+    {
+        return $this->userManager->findUserByUsernameOrEmail($username);
     }
 
     /**
@@ -65,20 +78,5 @@ class UserProvider implements UserProviderInterface
         $userClass = $this->userManager->getClass();
 
         return $userClass === $class || is_subclass_of($class, $userClass);
-    }
-
-    /**
-     * Finds a user by username.
-     *
-     * This method is meant to be an extension point for child classes.
-     *
-     * @param string $username
-     *
-     * @return UserInterface|null
-     */
-    protected function findUser($username)
-    {
-        return $this->userManager->findUserByUsernameOrEmail($username);
-//        return $this->userManager->findUserByUsername($username);
     }
 }

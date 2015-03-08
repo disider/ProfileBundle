@@ -2,7 +2,7 @@
 
 namespace Diside\ProfileBundle\Form;
 
-use Diside\ProfileBundle\EventListener\AuthenticationListener;
+use Diside\ProfileBundle\EventListener\FormAuthenticationListener;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
@@ -30,7 +30,7 @@ class LoginForm extends AbstractType
 
         $builder->add('login', 'submit', array('label' => 'form.login'));
 
-        $builder->addEventSubscriber(new AuthenticationListener($this->session));
+        $builder->addEventSubscriber(new FormAuthenticationListener($this->session));
     }
 
     public function getName()
