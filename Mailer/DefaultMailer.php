@@ -35,7 +35,7 @@ class DefaultMailer implements Mailer
 
     public function sendConfirmRegistrationEmailTo(UserInterface $user)
     {
-        $this->sendHtml('Diside\ProfileBundle:Registration:confirmEmail', $user->getEmail(), array(
+        $this->sendHtml('DisideProfileBundle:Registration:confirmEmail', $user->getEmail(), array(
             'url' => $this->generateUrl('register_confirm', array(
                 'token' => $user->getConfirmationToken()
             )),
@@ -45,14 +45,14 @@ class DefaultMailer implements Mailer
 
     public function sendRegistrationCompletedEmailTo(UserInterface $user)
     {
-        $this->sendHtml('Diside\ProfileBundle:Registration:registrationCompletedEmail', $user->getEmail(), array(
+        $this->sendHtml('DisideProfileBundle:Registration:registrationCompletedEmail', $user->getEmail(), array(
             'user' => $user->getEmail(),
         ));
     }
 
     public function sendResetPasswordRequestEmailTo(UserInterface $user)
     {
-        $this->sendHtml('Diside\ProfileBundle:ResetPassword:requestResetPasswordEmail', $user->getEmail(), array(
+        $this->sendHtml('DisideProfileBundle:ResetPassword:requestResetPasswordEmail', $user->getEmail(), array(
             'url' => $this->generateUrl('reset_password', array(
                 'token' => $user->getResetPasswordToken()
             )),
