@@ -5,8 +5,6 @@ namespace Diside\ProfileBundle\Model;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityRepository;
 use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
-use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use Symfony\Component\Security\Core\Exception\UsernameNotFoundException;
 use Symfony\Component\Security\Core\User\UserInterface as SecurityUserInterface;
 
 class UserManager
@@ -55,7 +53,7 @@ class UserManager
      * Updates a user.
      *
      * @param SecurityUserInterface $user
-     * @param Boolean       $andFlush Whether to flush the changes (default true)
+     * @param Boolean $andFlush Whether to flush the changes (default true)
      */
     public function updateUser(SecurityUserInterface $user, $andFlush = true)
     {
